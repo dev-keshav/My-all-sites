@@ -6,20 +6,195 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <style>
-        h1{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #04fafd 5%, #119dff 50%, #030423);
+            position: absolute;
+        }
+
+
+
+        .wrapper div {
+            height: 60px;
+            width: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            animation: animate 4s linear infinite;
+        }
+
+        div .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 20%;
+            right: 20%;
+        }
+
+        .wrapper div:nth-child(1) {
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .wrapper div:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation: animate 10s linear infinite;
+        }
+
+        .wrapper div:nth-child(3) {
+            top: 40%;
+            left: 40%;
+            animation: animate 5s linear infinite;
+        }
+
+        .wrapper div:nth-child(4) {
+            top: 66%;
+            left: 30%;
+            animation: animate 7s linear infinite;
+        }
+
+        .wrapper div:nth-child(5) {
+            top: 90%;
+            left: 10%;
+            animation: animate 9s linear infinite;
+        }
+
+        .wrapper div:nth-child(6) {
+            top: 30%;
+            left: 60%;
+            animation: animate 5s linear infinite;
+        }
+
+        .wrapper div:nth-child(7) {
+            top: 70%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .wrapper div:nth-child(8) {
+            top: 75%;
+            left: 60%;
+            animation: animate 10s linear infinite;
+        }
+
+        .wrapper div:nth-child(9) {
+            top: 50%;
+            left: 50%;
+            animation: animate 6s linear infinite;
+        }
+
+        .wrapper div:nth-child(10) {
+            top: 45%;
+            left: 20%;
+            animation: animate 10s linear infinite;
+        }
+
+        .wrapper div:nth-child(11) {
+            top: 10%;
+            left: 90%;
+            animation: animate 9s linear infinite;
+        }
+
+        .wrapper div:nth-child(12) {
+            top: 20%;
+            left: 70%;
+            animation: animate 7s linear infinite;
+        }
+
+        .wrapper div:nth-child(13) {
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .wrapper div:nth-child(14) {
+            top: 60%;
+            left: 5%;
+            animation: animate 6s linear infinite;
+        }
+
+        .wrapper div:nth-child(15) {
+            top: 90%;
+            left: 80%;
+            animation: animate 9s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(0) translateY(0) rotate(70deg);
+            }
+
+            100% {
+                transform: scale(1.3) translateY(-100px) rotate(360deg);
+            }
+        }
+
+        .contents {
+            position: relative;
+        }
+
+
+
+        #auto-type {
+            padding-left: 43%;
+        }
+
+        @media (max-width: 600px) {
+            #auto-type {
+                padding-left: 100px;
+            }
+        }
+
+        .auto-type {
+            width: 0ch;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: text 6s infinite;
+            border-right: 2px solid black;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            font-weight: 600;
+            color: rgb(43, 39, 61);
+        }
+
+        @keyframes text {
+            0% {
+                width: 0ch;
+            }
+
+            50% {
+                width: 23ch;
+            }
+        }
+
+        h1 {
             padding-top: 60px;
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
             font-weight: 600;
         }
-        h2 {
+
+        /* h2 {
             padding-top: 5px;
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
             color: cadetblue;
             font-weight: 400;
-        }
+        } */
 
         #sec {
             text-align: center;
@@ -37,18 +212,23 @@
             width: max-content;
             /* margin-bottom: var(--mb-2); */
             font-size: 2.5rem;
-            color:cadetblue;
+            color: rgb(117, 228, 232);
         }
-        .home__social-icon{
+
+        .home__social-icon {
             padding-left: 5px;
         }
 
         .home__social-icon:hover {
-            color:rgb(106, 110, 110);
+            color: rgb(106, 110, 110);
+        }
+
+        em {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     </style>
     <title>All sites</title>
-    
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -56,25 +236,66 @@
 </head>
 
 <body>
-    <h1>Hey!!</h1>
-    <h2>It's nice to see you here</h2>
-    <div id="sec" class="d-grid gap-2 col-6 mx-auto">
-        <a class="btn btn-outline-secondary" target="_black" href="https://keshavkumarportfolio.netlify.app/" role="button">PortFolio</a>
-        <a class="btn btn-outline-secondary" target="_black" href="https://audio2text.netlify.app/" role="button">Audio 2 Text Convertor</a>
-        <a class="btn btn-outline-secondary" target="_black" href="https://bmi-calculati.netlify.app/" role="button">BMI-Calculator</a>
-        <a class="btn btn-outline-secondary" target="_black" href="https://drum-kits.netlify.app/" role="button">Drum Kits</a>
-        <a class="btn btn-outline-secondary" target="_black" href="https://javascriptvisualizer.netlify.app/" role="button">Sorting Visualizer</a>
-    </div>
-    <div class="home__social">
-        <a href="https://www.linkedin.com/in/keshav-kumar-coder/" target="_black" class="home__social-icon"><i
-                class='bx bxl-linkedin'></i></a>
-        <a href="https://www.instagram.com/officialkeshavkumar/" target="_black" class="home__social-icon"><i
-                class='bx bxl-instagram'></i></a>
-        <a href="https://github.com/keshav-fixed-404" target="_black" class="home__social-icon"><i class='bx bxl-github'></i></a>
-        <a href="mailto:keshavkumar9431@gmail.com" target="_black" class="home__social-icon"><i class='bx bx-mail-send'></i></a>
 
-        <a href="https://www.facebook.com/profile.php?id=100029481072194" target="_black" class="home__social-icon"><i class='bx bxl-facebook-square'></i></a>
-        
+    <div class="wrapper">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+    </div>
+
+
+
+
+
+
+    <div class="contents">
+        <h1>Hey!!</h1>
+        <!-- <h2>It's nice to see you here</h2> -->
+        <div id="auto-type">
+            <h2 class="auto-type">It is nice to you here </h2>
+        </div>
+        <div id="sec" class="d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-outline-secondary" target="_black" href="https://keshavkumarportfolio.netlify.app/"
+                role="button">PortFolio</a>
+            <a class="btn btn-outline-secondary" target="_black" href="https://audio2text.netlify.app/"
+                role="button">Audio
+                2 Text Convertor</a>
+            <a class="btn btn-outline-secondary" target="_black" href="https://bmi-calculati.netlify.app/"
+                role="button">BMI-Calculator</a>
+            <a class="btn btn-outline-secondary" target="_black" href="https://drum-kits.netlify.app/"
+                role="button">Drum
+                Kits</a>
+            <a class="btn btn-outline-secondary" target="_black" href="https://javascriptvisualizer.netlify.app/"
+                role="button">Sorting Visualizer</a>
+        </div>
+        <div class="home__social">
+            <a href="https://www.linkedin.com/in/keshav-kumar-coder/" target="_black" class="home__social-icon"><i
+                    class='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com/officialkeshavkumar/" target="_black" class="home__social-icon"><i
+                    class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/keshav-fixed-404" target="_black" class="home__social-icon"><i
+                    class='bx bxl-github'></i></a>
+            <a href="mailto:keshavkumar9431@gmail.com" target="_black" class="home__social-icon"><i
+                    class='bx bx-mail-send'></i></a>
+
+            <a href="https://www.facebook.com/profile.php?id=100029481072194" target="_black"
+                class="home__social-icon"><i class='bx bxl-facebook-square'></i></a>
+
+            <div><em>Keshav Kumar</em></div>
+        </div>
+
     </div>
 </body>
 
